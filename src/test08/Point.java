@@ -3,7 +3,7 @@ package test08;
 class Point {
     private int x, y;
 
-    public Point(int x, int y, String color) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -17,5 +17,4 @@ class Point {
         this.x = x;
         this.y = y;
     }
-
 }

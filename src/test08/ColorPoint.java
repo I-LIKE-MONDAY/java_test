@@ -1,30 +1,40 @@
 package test08;
 
-public class ColorPoint extends Point {
 
+
+
+public class ColorPoint extends Point {
 
     public static void main(String[] args) {
         ColorPoint cp = new ColorPoint(5, 5, "YELLOW");
         cp.setPoint(10, 20);
         cp.setColor("GREEN");
         cp.show();
+
     }
 
+    int xx,yy;
+    String co;
 
-    private String color;
-    public void setColor(String color) {
-        this.color = color;
-    }
     public ColorPoint(int x, int y, String color) {
-        super(x, y, color);
+        super(x,y);
     }
-    public void setPoint(int x, int y){
-        getX();
-        getY();
+
+
+    public void setPoint(int x, int y) {
+        move(x,y);
+        xx = getX();
+        yy = getY();
     }
+
+    public void setColor(String color) {
+        co = color;
+    }
+
     public void show() {
-        System.out.println(getX());
+        //GREEN색으로 (10, 20)
+        System.out.println(co + "색으로 (" + xx + "," + yy + ")");
     }
+
 
 }
-
