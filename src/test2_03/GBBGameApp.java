@@ -17,32 +17,42 @@ import static java.lang.Integer.parseInt;
 public class GBBGameApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("가위, 바위, 보 게임을 시작합니다.");
-        System.out.print("입력하세요 >> ");
-        String userGBB = scanner.nextLine();
-        int userGBB2 = 0;
-        if (userGBB.equals("가위")) {
-            userGBB2 = 1;
-        } else if (userGBB.equals("바위")) {
-            userGBB2 = 2;
-        } else if (userGBB.equals("보")) {
-            userGBB2 = 3;
-        }
+        while (true) {
+            System.out.println("------- 가위, 바위, 보 게임을 시작합니다. -------");
+            System.out.print("입력하세요 >> ");
+            String userGBB = scanner.nextLine();
+            int userGBB2 = 0;
+            if (userGBB.equals("가위")) {
+                userGBB2 = 1;
+            } else if (userGBB.equals("바위")) {
+                userGBB2 = 2;
+            } else if (userGBB.equals("보")) {
+                userGBB2 = 3;
+            }
 
-        Random random = new Random();
-        int comGBB = random.nextInt(3) + 1;
-        String comGBB2 = "";
-        if (comGBB == 1) {
-            comGBB2 = "가위";
-        } else if (comGBB == 2) {
-            comGBB2 = "바위";
-        } else if (comGBB == 3) {
-            comGBB2 = "보";
-        }
-        System.out.println("컴퓨터 >> " + comGBB2);
+            Random random = new Random();
+            int comGBB = random.nextInt(3) + 1;
+            String comGBB2 = "";
+            if (comGBB == 1) {
+                comGBB2 = "가위";
+            } else if (comGBB == 2) {
+                comGBB2 = "바위";
+            } else if (comGBB == 3) {
+                comGBB2 = "보";
+            }
+            System.out.println("컴퓨터 >> " + comGBB2);
 
-        if (userGBB2 == comGBB) {
-            System.out.println("비겼습니다.");
-        } el
+            if (userGBB2 == comGBB) {
+                System.out.println("비겼습니다.");
+            } else if (userGBB2 == comGBB + 1) {
+                System.out.println("이겼습니다. 축하합니다.");
+            } else if (comGBB == userGBB2 + 1) {
+                System.out.println("컴퓨터가 이겼습니다.");
+            } else if (userGBB2 == comGBB + 2) {
+                System.out.println("컴퓨터가 이겼습니다.");
+            } else if (comGBB == userGBB2 + 2) {
+                System.out.println("이겼습니다. 축하합니다.");
+            }
+        }
     }
 }
