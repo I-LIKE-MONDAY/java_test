@@ -26,7 +26,7 @@ public class ThreeSixNine {
 //        }
 
         while (true) {
-            System.out.println("영어 단어를 입력하세요.");
+            System.out.print("영어 단어를 입력하세요 >> ");
             String scanEng = scanner.next();
 
             if(scanEng.equals("exit")) {
@@ -38,7 +38,7 @@ public class ThreeSixNine {
 
             for (int i = 0; i < eng.length; i++) {
                 if (scanEng.equals(eng[i])) {
-                    index = 1;
+                    index = i;
                     break;
                 }
             }

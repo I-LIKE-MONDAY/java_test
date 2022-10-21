@@ -28,7 +28,7 @@ public class PhoneManager {
 
         // 입력된 인원수만큼 for 문 돌리기
         for (int i = 0; i < p; i++) {
-            System.out.println("이름과 전화번호(번호는 연속적으로 입력) >> ");
+            System.out.print("이름과 전화번호(번호는 연속적으로 입력) >> ");
             nameArray[i] = scanner.next();
             telArray[i] = scanner.next();
         }
@@ -36,7 +36,7 @@ public class PhoneManager {
 
         // 저장된 내용 검색
         while (true) {
-            System.out.println("검색할 이름 >>");
+            System.out.print("검색할 이름 >>");
             String searchName = scanner.next();
             if (searchName.equals("exit")) {
                 System.out.println("프로그램을 종료합니다...");

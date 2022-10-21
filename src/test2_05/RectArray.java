@@ -18,7 +18,7 @@ public class RectArray {
 
         for(int i = 0; i < 4; i++) {
             count++;
-            System.out.print(count + "너비와 높이 >> ");
+            System.out.print(count + " 너비와 높이 >> ");
             int a = scanner.nextInt();
             int b = scanner.nextInt();
             int rect = new Rect(a, b).getArea();

@@ -8,14 +8,15 @@ public class Phone {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("이름과 전화번호 입력 >> ");
-        String name = scanner.next();
-        String tel = scanner.next();
+        for(int i = 0; i < 2; i++) {
+            System.out.print("이름과 전화번호 입력 >> ");
+            String name = scanner.next();
+            String tel = scanner.next();
 
-        Phone ph = new Phone(name, tel);
+            Phone ph = new Phone(name, tel);
 
-        System.out.println(ph.getName() + "의 번호 " + ph.getTel());
-
+            System.out.println(ph.getName() + "의 번호 " + ph.getTel());
+        }
     }
     private String name, tel;
     public Phone(String name, String tel) {
